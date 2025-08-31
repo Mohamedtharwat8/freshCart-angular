@@ -1,0 +1,56 @@
+<nav>
+  <div
+    class="flex max-w-screen flex-col m-auto justify-between items-center p-4"
+  >
+    <div class="logo">
+      <a routerLink="/"><img src="./images/r-logo.png" alt="" /></a>
+    </div>
+    <button (click)="toggleMobile()" class="md:hidden">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div
+      [classList]="isMobileOpen"
+      class="links flex w-full flex-wrap flex-col justify-between px-10"
+    >
+      <ul class="flex gap-4 md:flex-wrap flex-col">
+        <li>
+          <a routerLink="" routerLinkActive="text-main" class="hover:text-main"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a routerLink="" routerLinkActive="text-main" class="hover:text-main"
+            >Products</a
+          >
+        </li>
+        <li>
+          <a routerLink="" routerLinkActive="text-main" class="hover:text-main"
+            >Categories</a
+          >
+        </li>
+        <li>
+          <a routerLink="" routerLinkActive="text-main" class="hover:text-main"
+            >Cart</a
+          >
+        </li>
+      </ul>
+      <ul class="flex gap-4 md:flex-wrap flex-col">
+        <li>
+          <a routerLink="" routerLinkActive="text-main" class="hover:text-main"
+            >Login</a
+          >
+        </li>
+        <li>
+          <a routerLink="" routerLinkActive="text-main" class="hover:text-main"
+            >Register</a
+          >
+        </li>
+        <li>
+          <a routerLink="" routerLinkActive="text-main" class="hover:text-main"
+            >Logout</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
