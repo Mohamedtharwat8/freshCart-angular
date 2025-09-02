@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from "../../shared/components/navbar/navbar.component";
-import { RouterOutlet } from "../../../../node_modules/@angular/router/router_module.d-Bx9ArA6K";
+import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
 
 @Component({
   selector: 'app-auth-layout',

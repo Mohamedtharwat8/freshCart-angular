@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
@@ -9,9 +10,10 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+
+  isMobileOpen: boolean = false;
   toggleMobile() {
-    throw new Error('Method not implemented.');
+    this.isMobileOpen = !this.isMobileOpen
   }
-  isMobileOpen: any;
 
 }

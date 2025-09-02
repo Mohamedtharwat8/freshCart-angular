@@ -5,11 +5,14 @@ import { AuthLayoutComponent } from '../../layouts/auth-layout/auth-layout.compo
 export const AUTH_ROUTES: Routes = [
   {
     path: '',
-    component:AuthLayoutComponent,
+    component: AuthLayoutComponent,
     children: [
+      { path: "", redirectTo: "login", pathMatch: "full" },
       { path: 'login', loadComponent: () => import('./pages/login/login.component').then(c => c.LoginComponent) },
       { path: 'register', loadComponent: () => import('./pages/register/register.component').then(c => c.RegisterComponent) },
-      { path: 'forgetPassword', loadComponent: () => import('./pages/forgot-passowrd/forgot-passowrd.component').then(c => c.ForgotPassowrdComponent) }
+      { path: 'forgetPassword', loadComponent: () => import('./pages/forgot-passowrd/forgot-passowrd.component').then(c => c.ForgotPassowrdComponent) },
+      { path: "**", loadComponent: () => import('../../shared/components/not-found/not-found.component').then((c) => c.NotFoundComponent) }
 
-]}
+    ]
+  }
 ];
